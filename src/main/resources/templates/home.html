@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" th:href="@{/css/home.css}" />
+<meta charset="ISO-8859-1">
+<title>Main page</title>
+</head>
+<body>
+	<nav class="topbar">
+		<label class="logo">LearnX</label>
+		<ul>
+			<li><a href="/LearnX/home" class="active">Home</a></li>
+			<li><a href="/LearnX/home/kt-sessions">KT Sessions</a></li>
+			<li><a href="/LearnX/home/email-templates">Email Templates</a></li>
+			<li><a href="/LearnX/home/repetitive-tasks">Repetitive Tasks</a></li>
+			<li><a href="/LearnX/">Log Out</a></li>
+		</ul>
+	</nav>
+
+	<div class="left">
+
+		<h1>Portal that get results.</h1>
+
+		<div>
+			<p>LearnX one solution to all client project's.</p>
+			<p>Watch recorded KT sessions, understand Email Templates and
+				Repetitive Task's in your project.</p>
+		</div>
+
+		<a href="/LearnX/home/kt-sessions">Get Started</a>
+
+	</div>
+
+	<div class="right">
+		<!-- <h2>This is right side</h2> -->
+		<img th:src="${s3ImageUrl}" alt="">
+	</div>
+
+	<div class="video-player">
+		<p>Watch how to use LearnX portal</p>
+		<video width="70%" controls autoplay>
+			<source th:src="${s3VideoUrl}" type="video/mp4">
+		</video>
+	</div>
+
+	<div class="footer">
+		<div class="footer-element">
+		  <p>LearnX</p>
+		  <h3>Created By Company Team</h3>
+		</div>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section}, ~{::link})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Employee LogIn</title>
+	<link rel="stylesheet" th:href="@{/css/employee-login.css}" />
+	
+</head>
+<body>
+
+			<section>
+				
+			<div class="button-box">
+				<h3>Employee Log In</h3>
+			</div>
+
+			<form id="login" th:action="@{/employee-login}" th:object="${employeeLogin}" class="form-group"
+				method="post">
+				<input type="text" class="form-field" placeholder="Enter email"
+					 name="email" required> 
+				<input type="password"
+					class="form-field" placeholder="Enter 8 character password"
+					name="password" maxlength="8" minlength="8" required>
+				<a th:href="@{/employee-login/reset-password}">Forget password</a>
+				<p th:text="${errorMessage}"></p>
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+			
+			</section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{adminbase::layout(~{::title}, ~{::link}, ~{::section}, ~{::script})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Update Employee</title>
+	<link rel="stylesheet" th:href="@{/css/update-employee.css}" />
+</head>
+<body>
+	<section>
+
+	 <div class="form-box">
+			
+			<h2>LearnX</h2>
+			<form id="login" th:action="@{/admin/search-employee/update-employee}" th:object="${updatedEmployee}" class="form-group" method="post">
+				<input type="number"
+					class="form-field" placeholder="Enter Id" required
+					name="id" th:value="${selectedEmployee.getId()}" style="color: darkgrey;" readonly>
+					
+				<input type="text"
+					class="form-field" placeholder="Enter name" required
+					name="name" th:value="${selectedEmployee.getName()}">
+					
+				<input type="email" class="form-field" placeholder="Enter email"
+					required name="email" th:value="${selectedEmployee.getEmail()}"> 
+					
+				<input type="password"
+					class="form-field" placeholder="Enter 8 character password" required
+					name="password" maxlength="8" minlength="8" th:value="${selectedEmployee.getPassword()}"
+					style="color: darkgrey;" readonly>
+					
+				<label for="Job-level">Job Level:</label>
+				<select id="Job-level" class="option" name="job_level">
+                    <option th:each="jobLevel : ${jobLevelList}" th:value="${jobLevel}" 
+                    th:selected="${jobLevel == selectedJobLevel}" th:text="${jobLevel}"/>
+                </select>
+                
+                <label for="role">Job role:</label>
+                <select id="role" class="option" name="role">
+                    <option th:each="jobRole : ${jobRoleList}" th:value="${jobRole}" 
+                    th:selected="${jobRole == selectedJobRole}" th:text="${jobRole}"/>
+                </select>
+                
+                <label for="Unit">Unit:</label>
+                <select id="Unit" class="option" name="unit">
+					<option th:each="unit : ${unitList}" th:value="${unit}" 
+					th:selected="${unit == selectedUnit}" th:text="${unit}"/>
+                </select>
+                
+                <label for="office">Office Location:</label>
+                <select id="office" class="option" name="office">
+					<option th:each="office : ${officeList}" th:value="${office}" 
+					th:selected="${office == selectedOffice}" th:text="${office}"/>
+                </select>
+                
+				<p th:text="${errorMessage}"></p>
+				<button type="submit" class="submit-btn">Update</button>
+			</form>
+	 </div>
+	
+	</section>
+</body>
+</html>

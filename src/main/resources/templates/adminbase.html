@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title,link,content,script)">
+<head>
+	<meta charset="UTF-8" />
+	<title th:replace="${title}">LearnX Admin</title>
+	<link rel="stylesheet" th:replace="${link}"/>
+	<link rel="stylesheet" th:href="@{/css/adminbase.css}" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!--<div th:replace="${script}"></div>-->
+</head>
+<body>
+	
+	<nav class="topbar">
+		<label class="logo">LearnX</label>
+		<ul>
+			<li><a class="nav-link active" href="/LearnX/admin/view-employee">View Employee</a></li>
+			<li><a class="nav-link" href="/LearnX/admin/add-employee">Add Employee</a></li>
+			<li><a class="nav-link" href="/LearnX/admin/search-employee">Search Employee</a></li>
+			<li><a class="nav-link" href="/LearnX/admin/update-employee">Update Employee</a></li>
+			<li><a href="/LearnX">Sign Out</a></li>
+		</ul>
+	</nav>
+	
+    <div class="form" th:replace="${content}">
+		
+	</div>
+
+	<script th:src="@{/js/adminbase.js}"></script>
+	
+</body>
+</html>

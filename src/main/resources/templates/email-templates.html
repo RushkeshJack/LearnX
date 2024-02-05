@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html  xmlns:th="http://www.thymeleaf.org" th:insert="~{homebase::layout(~{::title}, ~{::link}, ~{::section}, ~{::script})}">
+<head>
+<link rel="stylesheet" th:href="@{/css/email-templates.css}" />
+<meta charset="ISO-8859-1">
+<title>Email Templates</title>
+</head>
+<body>
+
+    <section>
+
+			<h1 id="header">This is the header</h1>
+
+			<div>
+				<p id="to">To</p>
+				<p id="toText">
+					<i class="fa-sharp fa-solid fa-check"></i>This is To
+				</p>
+				<br>
+				<p id="cc">Cc</p>
+				<p id="ccText">
+					<i class="fa-sharp fa-solid fa-check"></i>This is CC
+				</p>
+				<br>
+				<p id="subject">Subject</p>
+				<p id="subjectText">This is subject</p>
+				<br>
+				<p id="attachment">Attachment</p>
+				<p id="attachedDocs">Attach necessary documents here</p>
+
+				<p id="emailHeader">This is header</p>
+				<p id="content">This is content</p>
+				<p id="content">
+					<span>Your faithfully, </span> <span>Rushikesh Khandekar </span> <span> Java
+						Connect Team</span>
+				</p>
+			</div>
+
+	</section>
+		 
+
+	<script th:src="@{/js/email-templates.js}"></script>
+</body>
+</html>

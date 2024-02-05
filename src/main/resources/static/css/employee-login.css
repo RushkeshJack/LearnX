@@ -1,0 +1,59 @@
+.button-box {
+	margin: 0px 0px;
+	position: relative;
+	border-radius: 30px;
+}
+
+.button-box h3 {
+	margin: 0px 0px;
+	font-size: 16px;
+	padding: 10px;
+	text-align: center;
+}
+
+.form-group {
+	position: relative;
+	height:auto;
+	padding: 50px 30px;
+	transition: 1s;
+}
+
+.form-group .form-field {
+	width: 100%;
+	padding: 10px 0;
+	margin: 10px 0;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+
+.form-group a{
+	text-decoration: none;
+	display: block;
+	margin: 30px 0px;
+	text-align: center;
+}
+
+
+.form-group p {
+	text-align: center;
+	margin: 30px 0px;
+	color: red;
+}
+
+.form-group .submit-btn {
+	width: 100%;
+	padding: 10px 30px;
+	cursor: pointer;
+	color: white;
+	font-size: 14px;
+	margin: 10px auto;
+	background: linear-gradient(to right, #04A4FF, #54a8e8);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+	font-weight: bold;
+}

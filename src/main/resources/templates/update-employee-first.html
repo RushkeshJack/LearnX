@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{adminbase::layout(~{::title}, ~{::link}, ~{::section}, ~{::script})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Update Employee</title>
+	<link rel="stylesheet" th:href="@{/css/update-employee-first.css}" />
+</head>
+<body>
+	
+	<section>
+		
+	 <div class="hero">
+		<div class="form-box">
+			<h3 style="text-align: center;">Update Employee</h3>
+			<form id="login" th:action="@{/admin/update-employee/employee}" class="form-group" method="get">
+				<input type="number" class="form-field" placeholder="Enter Id" required name="id" >
+				<p th:text="${errorMessage}"></p>
+				<button type="submit" class="submit-btn">Check</button>
+			</form>
+
+		</div>
+	 </div>
+	
+	</section>
+
+	
+</body>
+</html>

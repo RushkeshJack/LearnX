@@ -1,0 +1,38 @@
+.right h1 {
+	position: relative;
+	top: 30px;
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.video-player {
+	position: relative;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.steps {
+	margin-top: 60px;
+	display: inline-block;
+	/* border: 2px solid red; */
+	margin:50px;
+}
+
+.steps h3 {
+	margin-bottom: 20px;
+}
+
+.steps .content-box {
+	background-color: #f1f1f1;
+	border: 2px solid green;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.steps .content-box p {
+	/* border: 2px solid green;  */
+	padding: 10px 10px;
+	border-radius: 5px;
+	font-size: 18px;
+}

@@ -1,0 +1,160 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: montserrat;
+}
+
+/*Topbar css*/
+
+.topbar {
+	background: #0082e6;
+	height: auto;
+	width: 100%;
+}
+
+.topbar label.logo {
+	color: white;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+
+.topbar ul {
+	float: right;
+	margin-right: 40px;
+}
+
+.topbar ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0px 10px;
+}
+
+.topbar ul li a {
+	color: white;
+	font-size: 18px;
+	padding: 7px 10px;
+	border-radius: 3px;
+}
+
+.topbar a.active, a:hover {
+	background: #1b9bff;
+	transition: 0.2s;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgb(255, 255, 255);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgb(255, 255, 255);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(0, 0, 0);
+}
+
+
+/*Container css*/
+
+.container {
+	/*border: 2px rgb(255, 0, 0) solid;*/
+	margin:40px;
+	display : flex;
+    flex-direction : row;
+	/*box-shadow: rgb(209, 209, 209) 0px 0px 30px 20px;*/
+}
+
+.container .left-container {
+	width: 30%;
+	margin-right: 15px;
+	/*border: 2px rgb(128, 255, 0) solid;*/
+}
+.container .right-container {
+	width: 70%;
+	/*border: 2px rgb(128, 0, 255) solid;*/
+	box-shadow:0px 0px 20px 10px rgb(209, 209, 209) ;
+}
+
+.left {
+	background: #042331;
+	height: 610px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.left ul li {
+	margin: 0px 0px;
+}
+
+.left ul li a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+	color: white;
+	padding: 23.5px 20px;
+	box-sizing: border-box;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+.left a.active, .left a:hover {
+	background: #1b9bff;
+	transition: 0.2s;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+
+/*Footer css*/
+
+.footer {
+	position: relative;
+	text-align: center;	
+	background: #424242;
+	height: 160px;	
+	top: 50px;
+	width: 100%;
+	color: white;
+	margin-bottom: 0px;
+}
+.footer-element{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer p {
+	/*border: 2px solid red;*/
+	display: inline-block;
+	font-size: 50px;
+	margin: 0px 0px;
+}
+
+.footer h3 {
+	font-size: 26px;
+	display: inline-block;
+	/*border: 2px solid red;*/
+	margin: 0px 0px;
+	margin-left: 10px;
+}
+

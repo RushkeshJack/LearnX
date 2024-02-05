@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title,link,rightcontent,script)">
+<head>
+	<meta charset="UTF-8" />
+	<title th:replace="${title}">LearnX Login</title>
+	<link rel="stylesheet" th:replace="${link}"/>
+	<link rel="stylesheet" th:href="@{/css/homebase.css}" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<nav class="topbar">
+		<label class="logo">LearnX</label>
+		<ul>
+			<li><a href="/LearnX/home" class="nav-link active">Home</a></li>
+			<li><a href="/LearnX/home/kt-sessions" class="nav-link">KT Sessions</a></li>
+			<li><a href="/LearnX/home/email-templates" class="nav-link">Email Templates</a></li>
+			<li><a href="/LearnX/home/repetitive-tasks" class="nav-link">Repetitive Tasks</a></li>
+			<li><a href="/LearnX/">Log Out</a></li>
+		</ul>
+	</nav>
+	
+    <div class="container">
+	  <div class="left-container">
+
+		<section class="left">
+			<ul>
+				<li id="left-li">
+					<!--Left side menu options are being added javascript here as anchor tag-->
+				</li>
+			</ul>
+		</section>
+	  </div> 
+
+	  <div class="right-container">
+		  
+		<section class="right" th:insert="${rightcontent}">
+		
+		</section>
+	 </div>
+	 
+	</div>
+	
+	<div class="footer">
+		<div class="footer-element">
+		  <p>LearnX</p>
+		  <h3>Created By Company Team</h3>
+		</div>
+	</div>
+
+	
+	<script th:replace="${script}"></script>
+	<script th:src="@{/js/homebase.js}"></script>
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section}, ~{::link})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Admin LogIn</title>
+	<link rel="stylesheet" th:href="@{/css/admin-login.css}" />
+</head>
+<body>
+
+			<section>
+				
+			<div class="button-box">
+				<h3>Admin LogIn</h3>
+			</div>
+
+			<form th:action="@{/admin-login}" th:object="${adminLogin}" class="form-group"
+				method="post">
+				<input type="text" class="form-field" placeholder="Enter email"
+					name="email" required> 
+				<input type="password"
+					class="form-field" placeholder="Enter 8 character password"
+					name="password" maxlength="8" minlength="8" required>
+				<p th:text="${errorMessage}"></p>
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+			
+			</section>
+
+
+</body>
+</html>

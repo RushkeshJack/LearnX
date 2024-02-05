@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content,link)">
+<head>
+	<meta charset="UTF-8" />
+	<title>LearnX Login</title>
+	<link rel="stylesheet" th:replace="${link}"/>
+	<link rel="stylesheet" th:href="@{/css/base.css}"/>
+</head>
+<body>
+	<div class="container">
+		<div class="form-box">
+			<!-- This fragment is used for admin-login ,employee-login and forget-password pages -->
+			<h2>LearnX</h2>
+		    <div class="content" th:insert="${content}"></div>
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+.right {
+	/*overflow: scroll;
+	overflow-x: hidden;*/
+	height: auto;
+	/*border:1px solid red;*/
+}
+
+.right h1 {
+	position: relative;
+	margin: 20px;
+	font-size: 20px;
+	text-align: center;
+	/*border:1px solid red;*/
+}
+
+.right div {
+	position: relative;
+	background-color: #f1f1f1;
+ 	border:2px solid green; 
+ 	border-radius:5px;
+ 	margin: 20px;
+ 	/*border:1px solid red;*/
+}
+
+.right p {
+	padding: 10px;
+	line-height: 20px;
+}
+
+.right p span {
+	display: block;
+}
+
+
+#to {
+	padding: 10px 30px;
+	display: inline-block;
+	border: 1px solid black;
+	margin: 10px 10px;
+}
+
+#toText {
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+	display: inline;
+}
+
+#cc {
+	padding: 10px 30px;
+	display: inline-block;
+	border: 1px solid black;
+	margin: 10px 10px;
+}
+
+#ccText {
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+	display: inline;
+}
+
+#subject {
+	display: inline-block;
+	margin-left: 16px;
+	font-size: 14px;
+	color: gray;
+}
+
+#subjectText {
+	padding-bottom: 10px;
+	display: inline;
+	margin-left:40px;
+/* 	 border:1px solid red;  */
+}
+
+#attachment {
+	display: inline-block;
+	margin-left: 16px;
+	margin-top:10px;
+	font-size: 14px;
+	color: gray;
+}
+
+#attachedDocs {
+	margin-top: 20px;
+	border: 1px solid black;
+	display: inline;
+	margin-top:10px;
+	margin-left: 10px;
+	max-width: 500px;
+}
+
+.footer {
+	position: relative;
+	text-align: center;	
+	background: #424242;
+	height: 160px;	
+	top: 50px;
+	width: 100%;
+	color: white;
+	margin-bottom: 0px;
+}
+
+.footer-element{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer p {
+	/*border: 2px solid red;*/
+	display: inline-block;
+	font-size: 50px;
+	margin: 0px 0px;
+}
+
+.footer h3 {
+	font-size: 26px;
+	display: inline-block;
+	/*border: 2px solid red;*/
+	margin: 0px 0px;
+	margin-left: 10px;
+}

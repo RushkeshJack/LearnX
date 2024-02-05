@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{homebase::layout(~{::title}, ~{::link}, ~{::section}, ~{::script})}">
+<head>
+<link rel="stylesheet" th:href="@{/css/kt-sessions.css}" />
+<meta charset="ISO-8859-1">
+<title>KT Sessions</title>
+</head>
+<body>
+
+	<section class="right" >
+
+			<h1 th:text="${topHeaders}">
+			</h1>
+
+			<div class="video-player">
+				<video width="90%" controls autoplay>
+					<source th:src="@{${s3VideoUrl}}" type="video/mp4">
+				</video>
+			</div>
+
+			<div class="steps">
+				<h3>Content of video :</h3>
+				<div class="content-box">
+					<p th:text="${content}"></p>
+				</div>
+			</div>
+
+	</section>
+	 
+
+	
+	<script th:src="@{/js/kt-sessions.js}"></script>
+
+</body>
+</html>

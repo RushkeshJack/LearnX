@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{adminbase::layout(~{::title}, ~{::link}, ~{::section}, ~{::script})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Add Employee</title>
+	<link rel="stylesheet" th:href="@{/css/add-employee.css}" />
+</head>
+<body>
+	
+	<section>
+	 <div class="form-box">
+			
+			<h2>LearnX</h2>
+			<form id="login" th:action="@{/admin/add-employee}" th:object="${incomingEmployee}" class="form-group"
+				method="post">
+				<input type="number"
+					class="form-field" placeholder="Enter Id" required
+					name="id">
+				<input type="text"
+					class="form-field" placeholder="Enter name" required
+					name="name">
+				<input type="email" class="form-field" placeholder="Enter email"
+					required name="email"> 
+				<input type="password"
+					class="form-field" placeholder="Enter 8 character password" required
+					name="password" maxlength="8" minlength="8" >
+				
+				<label for="Job-level">Job Level:</label>
+				<select id="Job-level" class="option" name="job_level">
+                    <option value="JL1">Job level - 1</option>
+                    <option value="JL2">Job level - 2</option>
+                    <option value="JL3">Job level - 3</option>
+                    <option value="JL4">Job level - 4</option>
+                    <option value="JL5">Job level - 5</option>
+                    <option value="JL6">Job level - 6</option>
+                    <option value="JL7">Job level - 7</option>
+                </select>
+                
+                <label for="role">Job role:</label>
+                <select id="role" class="option" name="role">
+                    <option value="Mainframe developer">Mainframe developer</option>
+                    <option value="Springboot developer">Springboot developer</option>
+                    <option value="Java developer">Java developer</option>
+                    <option value="Python developer">Python developer</option>
+                    <option value="React developer">React developer</option>
+                    <option value="Cloud Engineer">Cloud Engineer</option>
+                    <option value="Data scientist">Data scientist</option>
+                </select>
+                
+                <label for="Unit">Unit:</label>
+                <select id="Unit" class="option" name="unit">
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Banking">Banking</option>
+                    <option value="Cyber security">Cyber security</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Application Development">Application Development</option>
+                    <option value="Automotive">Automotive</option>
+                    <option value="Aerospace and Defense">Aerospace and Defense</option>
+                </select>
+                
+                <label for="office">Office Location:</label>
+                <select id="office" class="option" name="office">
+                    <option value="Pune Hinjewadi">Pune Hinjewadi</option>
+                    <option value="Pune Magarpatta">Pune Magarpatta</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Hydrabad">Hydrabad</option>
+                    <option value="Kolkatta">Kolkatta</option>
+                </select>
+                
+				<p th:text="${errorMessage}"></p>
+				<button type="submit" class="submit-btn">Add</button>
+			</form>
+
+	 </div>
+	</section>
+	
+</body>
+</html>
